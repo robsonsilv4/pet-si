@@ -18,6 +18,7 @@
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-start">
           <nuxt-link to="/" class="navbar-item">Inicio</nuxt-link>
+          <nuxt-link to="/blog" class="navbar-item">Blog</nuxt-link>
         </div>
       </div>
     </div>

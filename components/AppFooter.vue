@@ -5,6 +5,7 @@
         <div class="column has-text-centered">
           <div>
             <nuxt-link to="/" class="link">Inicio</nuxt-link>
+            <nuxt-link to="/blog" class="link">Blog</nuxt-link>
           </div>
         </div>
       </div>
