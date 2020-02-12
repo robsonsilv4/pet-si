@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-medium is-bold is-info">
+    <section class="hero is-medium is-bold is-primary">
       <div class="hero-body">
         <div class="container">
           <p class="title is-2">PET-SI</p>

@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -42,13 +42,17 @@ export default {
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  styleResources: {
+    scss: ['assets/scss/_variables.scss']
+  },
   /*
    ** Build configuration
    */
@@ -59,6 +63,10 @@ export default {
           customProperties: false
         }
       }
+    },
+    // extractCSS: true,
+    extractCSS: {
+      allChunks: true
     },
     /*
      ** You can extend webpack config here

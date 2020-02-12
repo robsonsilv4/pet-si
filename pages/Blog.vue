@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero  is-medium  is-bold is-info">
+    <section class="hero  is-medium  is-bold is-primary">
       <div class="hero-body">
         <div class="container">
           <p class="title is-2">PET-SI Blog</p>
@@ -20,7 +20,12 @@
                   <p class="pagination-next" disabled="">Próximo</p>
 
                   <ul class="pagination-list">
-                    <li><a class="pagination-link is-current">1</a></li>
+                    <li>
+                      <a
+                        class="pagination-link pagination-is-primary is-primary is-current"
+                        >1</a
+                      >
+                    </li>
                   </ul>
                 </nav>
               </div>
@@ -143,7 +148,7 @@ export default {
       )
       this.posts = response.data
     } catch (error) {
-      console.log(error)
+      // console.log(error)
     }
   }
 }
