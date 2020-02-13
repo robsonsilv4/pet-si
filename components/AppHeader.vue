@@ -8,14 +8,15 @@
           class="navbar-burger burger"
           aria-label="menu"
           aria-expanded="false"
-          data-target="navMenu"
+          :class="{ 'is-active': showNav }"
+          @click="showNav = !showNav"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div id="navMenu" class="navbar-menu">
+      <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-start">
           <nuxt-link to="/" class="navbar-item">Inicio</nuxt-link>
           <nuxt-link to="/blog" class="navbar-item">Blog</nuxt-link>
@@ -27,7 +28,12 @@
 
 <script>
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  data() {
+    return {
+      showNav: false
+    }
+  }
 }
 </script>
 
