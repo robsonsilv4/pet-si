@@ -1,13 +1,12 @@
 <template>
   <div>
-    <section class="hero  is-medium  is-bold is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <p class="title is-2">PET-SI Blog</p>
-          <p class="subtitle is-3">Lorem ipsum dolor sit amet.</p>
-        </div>
-      </div>
-    </section>
+    <app-hero
+      title="Blog"
+      subtitle="Lorem ipsum dolor sit amet."
+      :img-background="
+        'https://www.buenosaireseducacional.com.br/wp-content/uploads/2019/06/qual-a-diferenca-entre-o-cbc-e-o-ubaxxi-da-uba-1024x410.jpg'
+      "
+    />
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -123,7 +122,10 @@
 <script>
 import axios from 'axios'
 
+import AppHero from '~/components/AppHero'
+
 export default {
+  components: { AppHero },
   data() {
     return {
       posts: []

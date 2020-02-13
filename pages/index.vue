@@ -1,13 +1,12 @@
 <template>
   <div>
-    <section class="hero is-medium is-bold is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <p class="title is-2">PET-SI</p>
-          <p class="subtitle is-3">PET - Sistemas de Informação</p>
-        </div>
-      </div>
-    </section>
+    <app-hero
+      title="'PET - SI'"
+      subtitle="'PET - Sistemas de Informação'"
+      :img-background="
+        'https://www.quixada.ufc.br/wp-content/uploads/2018/05/2018-05-30-ufc-campus-quixad%C3%A1_prof-odorico.jpg'
+      "
+    />
 
     <div class="hero-body">
       <section class="section">
@@ -62,8 +61,13 @@
 </template>
 
 <script>
+import AppHero from '~/components/AppHero'
+
 export default {
   name: 'Inicio',
+  components: {
+    AppHero
+  },
   data() {
     return {
       pilares: [
@@ -102,4 +106,4 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss"></style>
