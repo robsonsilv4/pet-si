@@ -18,8 +18,8 @@
       </div>
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-start">
-          <nuxt-link to="/" class="navbar-item">Inicio</nuxt-link>
-          <nuxt-link to="/blog" class="navbar-item">Blog</nuxt-link>
+          <nuxt-link to="/" exact class="navbar-item">Inicio</nuxt-link>
+          <nuxt-link to="/blog" exact class="navbar-item">Blog</nuxt-link>
         </div>
       </div>
     </div>

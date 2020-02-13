@@ -51,6 +51,10 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  router: {
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-active'
+  },
   styleResources: {
     scss: ['assets/scss/_variables.scss']
   },
