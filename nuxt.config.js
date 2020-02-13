@@ -43,7 +43,8 @@ export default {
     '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-purgecss'
   ],
   /*
    ** Axios module configuration
@@ -52,6 +53,24 @@ export default {
   axios: {},
   styleResources: {
     scss: ['assets/scss/_variables.scss']
+  },
+  purgeCSS: {
+    mode: 'webpack',
+    enabled: process.env.NODE_ENV === 'production',
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js'
+    ],
+    styleExtensions: ['.css', '.scss'],
+    whitelist: ['body', 'html', 'nuxt-progress'],
+    extractors: [
+      {
+        extractor: (content) => content.match(/[A-z0-9-:\\/]+/g) || [],
+        extensions: ['html', 'vue', 'js']
+      }
+    ]
   },
   /*
    ** Build configuration
