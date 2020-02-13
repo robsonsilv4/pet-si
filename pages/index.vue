@@ -102,6 +102,13 @@ export default {
         { nome: 'Nome do membro', foto: '', tipo: 'Bolsista' }
       ]
     }
+  },
+  head() {
+    return {
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+      ]
+    }
   }
 }
 </script>
