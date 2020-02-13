@@ -43,7 +43,7 @@
                 <div class="level-item">
                   <figure class="image is-128x128">
                     <img
-                      class="is-rounded"
+                      class="is-rounded zoom"
                       src="https://via.placeholder.com/150"
                       alt=""
                     />
@@ -106,4 +106,13 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.zoom {
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+</style>
